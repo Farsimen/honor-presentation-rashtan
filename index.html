@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONOR Rasht Marketing Campaign 1404</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content centered">
+                <div class="logo-container">
+                    <h1 class="brand-logo">HONOR</h1>
+                </div>
+                <h2 class="main-title">HONOR Rasht Project - 1404</h2>
+                <p class="subtitle">Roadshow Counters, Counter Installation & Complete Rebranding</p>
+                <button class="cta-button" onclick="navigation.next()">Start Presentation →</button>
+            </div>
+        </section>
+
+        <!-- Slide 2: Interactive Map -->
+        <section class="slide" id="slide-2">
+            <div class="slide-content">
+                <h2 class="slide-title">Strategic Locations in Rasht</h2>
+                <p class="slide-description">6 locations across Lakaani and Motahari Streets</p>
+                <div id="map" class="map-container"></div>
+                <button class="back-to-home" onclick="navigation.goToSlide(0)" title="Back to Home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Slide 3: Ilia Plus -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <h2 class="slide-title">Ilia Plus Store</h2>
+                <div class="location-grid">
+                    <div class="location-images">
+                        <div class="main-image">
+                            <img src="images/ilia-plus/main.jpg" alt="Ilia Plus Store" onerror="this.src='images/placeholder.jpg'">
+                        </div>
+                        <button class="gallery-button" onclick="openGallery('ilia-plus')">📷 View Gallery (4 Photos + 2 Videos)</button>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-group">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Lakaani St., Next to Ala'eddin Passage</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Store Code:</span>
+                            <span class="info-value">RSH00011</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value">Tabriz | City: Rasht</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Dimensions:</span>
+                            <span class="info-value">70cm × 150-170cm</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Counter Installation</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Staff:</span>
+                            <span class="info-value">1 Person</span>
+                        </div>
+                        <div class="highlights">
+                            <h3>Selection Reasons:</h3>
+                            <ul>
+                                <li>✓ High Traffic Volume</li>
+                                <li>✓ Customer Density</li>
+                                <li>✓ Strategic Location</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Charsu Plus Passage -->
+        <section class="slide" id="slide-4">
+            <div class="slide-content">
+                <h2 class="slide-title">Charsu Plus Passage</h2>
+                <div class="location-grid">
+                    <div class="location-images">
+                        <div class="main-image">
+                            <img src="images/charsu-plus/main.jpg" alt="Charsu Plus Passage" onerror="this.src='images/placeholder.jpg'">
+                        </div>
+                        <button class="gallery-button" onclick="openGallery('charsu-plus')">📷 View Gallery (4 Photos + 2 Videos)</button>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-group">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Lakaani St., Next to Sandogh-e Edalat St.</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Store Code:</span>
+                            <span class="info-value">-</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value">Tabriz | City: Rasht</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Dimensions:</span>
+                            <span class="info-value">120cm × 200-220cm</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Roadshow Counter</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Staff:</span>
+                            <span class="info-value">1 Person</span>
+                        </div>
+                        <div class="highlights">
+                            <h3>Selection Reasons:</h3>
+                            <ul>
+                                <li>✓ Very High Traffic</li>
+                                <li>✓ Customer Density</li>
+                                <li>✓ Strategic Location</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Puzzle Store -->
+        <section class="slide" id="slide-5">
+            <div class="slide-content">
+                <h2 class="slide-title">Puzzle Store</h2>
+                <div class="location-grid">
+                    <div class="location-images">
+                        <div class="main-image">
+                            <img src="images/puzzle/main.jpg" alt="Puzzle Store" onerror="this.src='images/placeholder.jpg'">
+                        </div>
+                        <button class="gallery-button" onclick="openGallery('puzzle')">📷 View Gallery (4 Photos + 2 Videos)</button>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-group">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Lakaani St., Opposite Sandogh-e Edalat</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Store Code:</span>
+                            <span class="info-value">RSH00059</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value">Tabriz | City: Rasht</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Dimensions:</span>
+                            <span class="info-value">150cm × 150-200cm</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Counter Installation</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Staff:</span>
+                            <span class="info-value">1 Person</span>
+                        </div>
+                        <div class="highlights">
+                            <h3>Selection Reasons:</h3>
+                            <ul>
+                                <li>✓ High Traffic Volume</li>
+                                <li>✓ Customer Density</li>
+                                <li>✓ Strategic Location</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Xiaomi Center Rasht -->
+        <section class="slide" id="slide-6">
+            <div class="slide-content">
+                <h2 class="slide-title">Xiaomi Center Rasht</h2>
+                <div class="location-grid">
+                    <div class="location-images">
+                        <div class="main-image">
+                            <img src="images/xiaomi-center/main.jpg" alt="Xiaomi Center" onerror="this.src='images/placeholder.jpg'">
+                        </div>
+                        <button class="gallery-button" onclick="openGallery('xiaomi-center')">📷 View Gallery (4 Photos + 2 Videos)</button>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-group">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Mikaeil Intersection, Beginning of Motahari St.</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Store Code:</span>
+                            <span class="info-value">RSH00164</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value">Tabriz | City: Rasht</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Counter Dimensions:</span>
+                            <span class="info-value">120cm × 150-200cm</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Complete Rebranding</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Staff:</span>
+                            <span class="info-value">1 Person</span>
+                        </div>
+                        <div class="highlights">
+                            <h3>Rebranding Details:</h3>
+                            <ul>
+                                <li>✓ Signboard Replacement</li>
+                                <li>✓ Interior Lightboxes</li>
+                                <li>✓ Entrance Flaps</li>
+                                <li>✓ Store Wall Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Sivan Store -->
+        <section class="slide" id="slide-7">
+            <div class="slide-content">
+                <h2 class="slide-title">Sivan Store</h2>
+                <div class="location-grid">
+                    <div class="location-images">
+                        <div class="main-image">
+                            <img src="images/sivan/main.jpg" alt="Sivan Store" onerror="this.src='images/placeholder.jpg'">
+                        </div>
+                        <button class="gallery-button" onclick="openGallery('sivan')">📷 View Gallery (4 Photos + 2 Videos)</button>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-group">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Lakaani St., Next to Tejarat Bank</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Store Code:</span>
+                            <span class="info-value">RSH00063</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value">Tabriz | City: Rasht</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Dimensions:</span>
+                            <span class="info-value">120cm × 200-250cm</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Counter Installation</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Staff:</span>
+                            <span class="info-value">1 Person</span>
+                        </div>
+                        <div class="highlights">
+                            <h3>Selection Reasons:</h3>
+                            <ul>
+                                <li>✓ High Traffic Volume</li>
+                                <li>✓ Customer Density</li>
+                                <li>✓ Strategic Location</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Glass Headers -->
+        <section class="slide" id="slide-8">
+            <div class="slide-content">
+                <h2 class="slide-title">Passage Glass Display Headers</h2>
+                <div class="location-grid">
+                    <div class="location-images">
+                        <div class="main-image">
+                            <img src="images/glass-headers/main.jpg" alt="Glass Headers" onerror="this.src='images/placeholder.jpg'">
+                        </div>
+                        <button class="gallery-button" onclick="openGallery('glass-headers')">📷 View Gallery (4 Photos + 2 Videos)</button>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-group">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">Charsu Plus Passage, Lakaani St.</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Store Code:</span>
+                            <span class="info-value">Passage</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value">Tabriz | City: Rasht</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Dimensions:</span>
+                            <span class="info-value">150cm × 200-220cm</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Display Headers</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">Positions:</span>
+                            <span class="info-value">4 Headers (Inside & Outside)</span>
+                        </div>
+                        <div class="highlights">
+                            <h3>Configuration:</h3>
+                            <ul>
+                                <li>✓ 2 Pairs Side-by-Side</li>
+                                <li>✓ Back-to-Back Arrangement</li>
+                                <li>✓ Maximum Visibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Summary -->
+        <section class="slide" id="slide-9">
+            <div class="slide-content">
+                <h2 class="slide-title">Project Summary</h2>
+                <div class="summary-grid">
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Strategic Locations</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Staff Members</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Main Streets</div>
+                        </div>
+                    </div>
+                    
+                    <p class="summary-text">Strategic coverage across Motahari and Lakaani Streets - the most concentrated mobile retail corridor in Rasht</p>
+                    
+                    <div class="summary-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Location</th>
+                                    <th>Type</th>
+                                    <th>Code</th>
+                                    <th>Dimensions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Charsu Plus</td>
+                                    <td>Roadshow</td>
+                                    <td>-</td>
+                                    <td>120×200-220cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Ilia Plus</td>
+                                    <td>Counter</td>
+                                    <td>RSH00011</td>
+                                    <td>70×150-170cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Puzzle</td>
+                                    <td>Counter</td>
+                                    <td>RSH00059</td>
+                                    <td>150×150-200cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Xiaomi Center</td>
+                                    <td>Rebranding</td>
+                                    <td>RSH00164</td>
+                                    <td>120×150-200cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sivan</td>
+                                    <td>Counter</td>
+                                    <td>RSH00063</td>
+                                    <td>120×200-250cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Glass Headers</td>
+                                    <td>Display</td>
+                                    <td>Passage</td>
+                                    <td>150×200-220cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <button class="cta-button" onclick="window.location.href='mailto:contact@honor.com'">📧 Contact Us</button>
+                        <button class="cta-button secondary" onclick="navigation.goToSlide(1)">🗺️ View Map</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="navigation-controls">
+        <button class="nav-button prev" onclick="navigation.prev()" title="Previous">←</button>
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">9</span>
+        </div>
+        <button class="nav-button next" onclick="navigation.next()" title="Next">→</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeGallery()">&times;</span>
+            <h2 id="gallery-title">Gallery</h2>
+            <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
