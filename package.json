@@ -1,0 +1,10 @@
+{
+  "name": "honor-presentation-rashtan",
+  "version": "1.0.0",
+  "description": "HONOR Rasht Marketing Campaign Presentation",
+  "scripts": {
+    "build": "echo 'No build needed - static HTML site'"
+  },
+  "author": "HONOR Tabriz",
+  "license": "UNLICENSED"
+}
